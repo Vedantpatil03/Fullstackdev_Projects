@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📇 Contact Management System</h1>
+            <p>Organize and manage your contacts efficiently</p>
+        </header>
+
+        <main>
+            <!-- Add/Edit Contact Form -->
+            <section class="form-section">
+                <h2>Add New Contact</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            placeholder="First Name" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            placeholder="Last Name" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="Email Address" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            placeholder="Phone Number" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="address" 
+                            placeholder="Address"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="company" 
+                            placeholder="Company"
+                        >
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn" class="btn btn-primary">Add Contact</button>
+                        <button type="button" id="cancelBtn" class="btn btn-secondary" style="display:none;">Cancel</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Search and Filter Section -->
+            <section class="search-section">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="🔍 Search contacts by name or email..."
+                    >
+                    <span id="contactCount" class="contact-count">Total: 0</span>
+                </div>
+            </section>
+
+            <!-- Contacts List Section -->
+            <section class="contacts-section">
+                <h2>Your Contacts</h2>
+                <div id="contactsList" class="contacts-list">
+                    <p class="empty-message">No contacts yet. Add your first contact above!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Contact Management System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Contact Card Template (for editing) -->
+    <template id="contactTemplate">
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3 class="contact-name"></h3>
+                <p class="contact-email"><strong>Email:</strong> <span></span></p>
+                <p class="contact-phone"><strong>Phone:</strong> <span></span></p>
+                <p class="contact-address" style="display:none;"><strong>Address:</strong> <span></span></p>
+                <p class="contact-company" style="display:none;"><strong>Company:</strong> <span></span></p>
+            </div>
+            <div class="contact-actions">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

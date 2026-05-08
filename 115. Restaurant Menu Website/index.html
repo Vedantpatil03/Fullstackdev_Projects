@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>115. Restaurant Menu Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#be123c; --accent-soft: color-mix(in srgb, #be123c 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 115</span>
+        <span class="chip">HERO page</span>
+        <span class="chip">stacked layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#be123c" style="background:#be123c" title="#be123c" type="button"></button><button class="dot" data-accent="hsl(118 78% 48%)" style="background:hsl(118 78% 48%)" title="hsl(118 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(190 72% 42%)" style="background:hsl(190 72% 42%)" title="hsl(190 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-stacked">
+      <p class="eyebrow">Project 115</p>
+      <h1>Restaurant Menu Website</h1>
+      <p>A polished content site with sections, features, and a capture form. Built for Restaurant Menu Website.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":115,"name":"Restaurant Menu Website","mode":"hero","variant":"menu","accent":"#be123c","layout":"stacked","widget":"bookmarks","hue":66,"accentSet":["#be123c","hsl(118 78% 48%)","hsl(190 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Cuisine","title":"Filter menu items","text":"Switch categories and make the restaurant menu interactive."},{"label":"Order","title":"Featured plates","text":"Present dishes with prices and a modern card layout."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Restaurant Menu Website","secondaryAction":"Save Restaurant Menu Website","subtitle":"A polished content site with sections, features, and a capture form. Built for Restaurant Menu Website.","title":"Restaurant Menu Website"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

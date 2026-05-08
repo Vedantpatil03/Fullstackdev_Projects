@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>131. Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#059669; --accent-soft: color-mix(in srgb, #059669 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 131</span>
+        <span class="chip">UTILITY page</span>
+        <span class="chip">split layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#059669" style="background:#059669" title="#059669" type="button"></button><button class="dot" data-accent="hsl(222 78% 48%)" style="background:hsl(222 78% 48%)" title="hsl(222 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(294 72% 42%)" style="background:hsl(294 72% 42%)" title="hsl(294 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-split">
+      <p class="eyebrow">Project 131</p>
+      <h1>Personal Finance Tracker</h1>
+      <p>A focused utility with browser-only tools such as links, weather, or countdowns. Built for Personal Finance Tracker.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":131,"name":"Personal Finance Tracker","mode":"utility","variant":"finance","accent":"#059669","layout":"split","widget":"palette","hue":170,"accentSet":["#059669","hsl(222 78% 48%)","hsl(294 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Personal Finance Tracker","secondaryAction":"Save Personal Finance Tracker","subtitle":"A focused utility with browser-only tools such as links, weather, or countdowns. Built for Personal Finance Tracker.","title":"Personal Finance Tracker"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

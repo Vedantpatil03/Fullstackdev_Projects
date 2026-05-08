@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>118. Online Complaint Registration System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#dc2626; --accent-soft: color-mix(in srgb, #dc2626 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 118</span>
+        <span class="chip">CRUD page</span>
+        <span class="chip">timeline layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#dc2626" style="background:#dc2626" title="#dc2626" type="button"></button><button class="dot" data-accent="hsl(205 78% 48%)" style="background:hsl(205 78% 48%)" title="hsl(205 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(277 72% 42%)" style="background:hsl(277 72% 42%)" title="hsl(277 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-timeline">
+      <p class="eyebrow">Project 118</p>
+      <h1>Online Complaint Registration System</h1>
+      <p>A data manager with add, search, and remove controls. Built for Online Complaint Registration System.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":118,"name":"Online Complaint Registration System","mode":"crud","variant":"complaint","accent":"#dc2626","layout":"timeline","widget":"checklist","hue":153,"accentSet":["#dc2626","hsl(205 78% 48%)","hsl(277 72% 42%)"],"fields":[{"name":"title","label":"Complaint title"},{"name":"detail","label":"Description"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Water leak","detail":"Under review by maintenance team."},{"title":"Wi-Fi issue","detail":"Assigned to support desk."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Online Complaint Registration System","secondaryAction":"Save Online Complaint Registration System","subtitle":"A data manager with add, search, and remove controls. Built for Online Complaint Registration System.","title":"Online Complaint Registration System"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

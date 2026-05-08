@@ -1,0 +1,17 @@
+{
+  "name": "197. Supply Chain Tracker-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Supply Chain Tracker",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "http-server . -p 3000",
+    "dev": "http-server . -p 3000 -c-1",
+    "build": "echo 'Build process here'"
+  },
+  "keywords": ["frontend", "react", "vue"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

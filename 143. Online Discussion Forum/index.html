@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>143. Online Discussion Forum</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#1d4ed8; --accent-soft: color-mix(in srgb, #1d4ed8 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 143</span>
+        <span class="chip">BOARD page</span>
+        <span class="chip">timeline layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#1d4ed8" style="background:#1d4ed8" title="#1d4ed8" type="button"></button><button class="dot" data-accent="hsl(210 78% 48%)" style="background:hsl(210 78% 48%)" title="hsl(210 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(282 72% 42%)" style="background:hsl(282 72% 42%)" title="hsl(282 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-timeline">
+      <p class="eyebrow">Project 143</p>
+      <h1>Online Discussion Forum</h1>
+      <p>A posting or discussion board with local persistence. Built for Online Discussion Forum.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":143,"name":"Online Discussion Forum","mode":"board","variant":"forum","accent":"#1d4ed8","layout":"timeline","widget":"checklist","hue":158,"accentSet":["#1d4ed8","hsl(210 78% 48%)","hsl(282 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Online Discussion Forum","secondaryAction":"Save Online Discussion Forum","subtitle":"A posting or discussion board with local persistence. Built for Online Discussion Forum.","title":"Online Discussion Forum"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

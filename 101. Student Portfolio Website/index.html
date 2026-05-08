@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>101. Student Portfolio Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#1f4fd7; --accent-soft: color-mix(in srgb, #1f4fd7 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 101</span>
+        <span class="chip">HERO page</span>
+        <span class="chip">split layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#1f4fd7" style="background:#1f4fd7" title="#1f4fd7" type="button"></button><button class="dot" data-accent="hsl(72 78% 48%)" style="background:hsl(72 78% 48%)" title="hsl(72 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(144 72% 42%)" style="background:hsl(144 72% 42%)" title="hsl(144 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-split">
+      <p class="eyebrow">Project 101</p>
+      <h1>Student Portfolio Website</h1>
+      <p>A polished content site with sections, features, and a capture form. Built for Student Portfolio Website.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":101,"name":"Student Portfolio Website","mode":"hero","variant":"portfolio","accent":"#1f4fd7","layout":"split","widget":"palette","hue":20,"accentSet":["#1f4fd7","hsl(72 78% 48%)","hsl(144 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Profile","title":"About me","text":"A polished personal website with skills, projects, and contact form."},{"label":"Work","title":"Featured projects","text":"Showcase cards with responsive spacing and bold typography."},{"label":"Contact","title":"Get in touch","text":"A quick form for messages and lead capture."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Student Portfolio Website","secondaryAction":"Save Student Portfolio Website","subtitle":"A polished content site with sections, features, and a capture form. Built for Student Portfolio Website.","title":"Student Portfolio Website"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

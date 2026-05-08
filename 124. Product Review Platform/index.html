@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>124. Product Review Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#f97316; --accent-soft: color-mix(in srgb, #f97316 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 124</span>
+        <span class="chip">STORE page</span>
+        <span class="chip">sidebar layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#f97316" style="background:#f97316" title="#f97316" type="button"></button><button class="dot" data-accent="hsl(19 78% 48%)" style="background:hsl(19 78% 48%)" title="hsl(19 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(91 72% 42%)" style="background:hsl(91 72% 42%)" title="hsl(91 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-sidebar">
+      <p class="eyebrow">Project 124</p>
+      <h1>Product Review Platform</h1>
+      <p>A catalog site with cards, cart actions, and reviews. Built for Product Review Platform.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":124,"name":"Product Review Platform","mode":"store","variant":"reviews","accent":"#f97316","layout":"sidebar","widget":"timer","hue":327,"accentSet":["#f97316","hsl(19 78% 48%)","hsl(91 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Studio headphones","price":99,"tag":"4.8★"},{"name":"Noise-cancel earbuds","price":149,"tag":"4.7★"},{"name":"USB microphone","price":79,"tag":"4.6★"}],"primaryAction":"Open Product Review Platform","secondaryAction":"Save Product Review Platform","subtitle":"A catalog site with cards, cart actions, and reviews. Built for Product Review Platform.","title":"Product Review Platform"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

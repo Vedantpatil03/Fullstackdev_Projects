@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>🎯 QuizMaster</h1>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-btn active" onclick="showPage('home')">Home</button>
+                    <button class="nav-btn" onclick="showPage('results')">
+                        My Results <span class="results-badge" id="resultsBadge">0</span>
+                    </button>
+                    <button class="nav-btn" onclick="showPage('leaderboard')">Leaderboard</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Home Page -->
+            <section id="home" class="page active">
+                <div class="page-header">
+                    <h2>Welcome to QuizMaster</h2>
+                    <p>Test your knowledge with our exciting quizzes powered by live API</p>
+                </div>
+
+                <!-- Quiz Setup Form -->
+                <div class="quiz-setup">
+                    <h3>Configure Your Quiz</h3>
+                    
+                    <div class="form-grid">
+                        <!-- Number of Questions -->
+                        <div class="form-group">
+                            <label for="numQuestions">Number of Questions</label>
+                            <select id="numQuestions">
+                                <option value="5">5 Questions</option>
+                                <option value="10" selected>10 Questions</option>
+                                <option value="15">15 Questions</option>
+                                <option value="20">20 Questions</option>
+                            </select>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="">Any Category</option>
+                                <option value="9">General Knowledge</option>
+                                <option value="11">Film</option>
+                                <option value="12">Music</option>
+                                <option value="21">Sports</option>
+                                <option value="23">History</option>
+                                <option value="27">Animals</option>
+                                <option value="28">Vehicles</option>
+                                <option value="17">Science & Nature</option>
+                                <option value="18">Computers</option>
+                                <option value="22">Geography</option>
+                            </select>
+                        </div>
+
+                        <!-- Difficulty -->
+                        <div class="form-group">
+                            <label for="difficulty">Difficulty</label>
+                            <select id="difficulty">
+                                <option value="">Any Difficulty</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+
+                        <!-- Type -->
+                        <div class="form-group">
+                            <label for="type">Question Type</label>
+                            <select id="type">
+                                <option value="">Any Type</option>
+                                <option value="multiple" selected>Multiple Choice</option>
+                                <option value="boolean">True/False</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat-box">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-text">
+                            <div class="stat-value" id="totalQuizzes">0</div>
+                            <div class="stat-label">Quizzes Taken</div>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-text">
+                            <div class="stat-value" id="bestScore">0%</div>
+                            <div class="stat-label">Best Score</div>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-text">
+                            <div class="stat-value" id="avgScore">0%</div>
+                            <div class="stat-label">Average Score</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Page -->
+            <section id="quiz" class="page">
+                <div class="quiz-header">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                        <div class="progress-text">
+                            Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+                        </div>
+                    </div>
+                    <div class="quiz-timer">
+                        <span id="timer">00:00</span>
+                    </div>
+                </div>
+
+                <div id="loadingSpinner" class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading questions from API...</p>
+                </div>
+
+                <div id="quizContent" style="display: none;">
+                    <div class="question-container">
+                        <div class="question-category" id="questionCategory"></div>
+                        <h3 class="question-text" id="questionText"></h3>
+                        
+                        <div class="options-container" id="optionsContainer">
+                            <!-- Options will be generated here -->
+                        </div>
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button class="btn btn-secondary" onclick="previousQuestion()">← Previous</button>
+                        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
+                        <button class="btn btn-success" id="submitBtn" onclick="submitQuiz()" style="display: none;">Submit Quiz</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Page -->
+            <section id="results" class="page">
+                <div class="page-header">
+                    <h2>My Results</h2>
+                    <p>Your quiz performance history</p>
+                </div>
+
+                <div id="resultsList" class="results-list">
+                    <p class="empty-message">No quizzes taken yet. Start a quiz to see results!</p>
+                </div>
+            </section>
+
+            <!-- Leaderboard Page -->
+            <section id="leaderboard" class="page">
+                <div class="page-header">
+                    <h2>Leaderboard</h2>
+                    <p>Top performers and achievements</p>
+                </div>
+
+                <div class="leaderboard-container">
+                    <div id="leaderboardList" class="leaderboard-list">
+                        <p class="empty-message">No scores recorded yet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Result Modal -->
+            <div id="resultModal" class="modal">
+                <div class="modal-content result-modal">
+                    <span class="close" onclick="closeResultModal()">&times;</span>
+                    <div class="result-summary" id="resultSummary">
+                        <!-- Result details will be loaded here -->
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" onclick="showPage('home')">Take Another Quiz</button>
+                        <button class="btn btn-secondary" onclick="closeResultModal()">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Results Modal -->
+            <div id="detailedResultModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDetailedResultModal()">&times;</span>
+                    <h2>Quiz Review</h2>
+                    <div id="detailedResults" class="detailed-results">
+                        <!-- Detailed results will be loaded here -->
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-secondary" onclick="closeDetailedResultModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 QuizMaster - Powered by Open Trivia Database. Test your knowledge daily!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

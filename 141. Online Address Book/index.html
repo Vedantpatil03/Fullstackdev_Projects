@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>141. Online Address Book</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#2563eb; --accent-soft: color-mix(in srgb, #2563eb 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 141</span>
+        <span class="chip">CRUD page</span>
+        <span class="chip">split layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#2563eb" style="background:#2563eb" title="#2563eb" type="button"></button><button class="dot" data-accent="hsl(152 78% 48%)" style="background:hsl(152 78% 48%)" title="hsl(152 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(224 72% 42%)" style="background:hsl(224 72% 42%)" title="hsl(224 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-split">
+      <p class="eyebrow">Project 141</p>
+      <h1>Online Address Book</h1>
+      <p>A data manager with add, search, and remove controls. Built for Online Address Book.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":141,"name":"Online Address Book","mode":"crud","variant":"address","accent":"#2563eb","layout":"split","widget":"palette","hue":100,"accentSet":["#2563eb","hsl(152 78% 48%)","hsl(224 72% 42%)"],"fields":[{"name":"title","label":"Contact name"},{"name":"detail","label":"Address"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Main office","detail":"12 River Street, London"},{"title":"Branch office","detail":"88 Market Road, Delhi"}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Online Address Book","secondaryAction":"Save Online Address Book","subtitle":"A data manager with add, search, and remove controls. Built for Online Address Book.","title":"Online Address Book"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

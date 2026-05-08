@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Collection System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>📝 Feedback Hub</h1>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-btn" onclick="showPage('submit')">Submit Feedback</button>
+                    <button class="nav-btn" onclick="showPage('view')">View Feedback</button>
+                    <button class="nav-btn" onclick="showPage('analytics')">Analytics</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Submit Feedback Page -->
+            <section id="submit" class="page active">
+                <div class="page-header">
+                    <h2>Share Your Feedback</h2>
+                    <p>Help us improve by sharing your thoughts and suggestions</p>
+                </div>
+
+                <div class="form-container">
+                    <form id="feedbackForm">
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email"
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                        </div>
+
+                        <!-- Feedback Type -->
+                        <div class="form-group">
+                            <label for="type">Feedback Type *</label>
+                            <select id="type" name="type" required>
+                                <option value="">Select a type</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="praise">Praise</option>
+                                <option value="feature-request">Feature Request</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Rating -->
+                        <div class="form-group">
+                            <label>Overall Experience Rating *</label>
+                            <div class="rating-container">
+                                <div class="stars">
+                                    <span class="star" data-value="1">⭐</span>
+                                    <span class="star" data-value="2">⭐</span>
+                                    <span class="star" data-value="3">⭐</span>
+                                    <span class="star" data-value="4">⭐</span>
+                                    <span class="star" data-value="5">⭐</span>
+                                </div>
+                                <input type="hidden" id="rating" name="rating" value="0" required>
+                                <span id="ratingLabel" class="rating-label">No rating selected</span>
+                            </div>
+                        </div>
+
+                        <!-- Feedback Message -->
+                        <div class="form-group">
+                            <label for="message">Your Feedback *</label>
+                            <textarea 
+                                id="message" 
+                                name="message"
+                                placeholder="Please share your detailed feedback..."
+                                rows="6"
+                                required
+                            ></textarea>
+                            <span class="char-count"><span id="charCount">0</span>/500 characters</span>
+                        </div>
+
+                        <!-- Contact Preference -->
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="allowContact" name="allowContact" checked>
+                                You can contact me about this feedback
+                            </label>
+                        </div>
+
+                        <!-- Attachments -->
+                        <div class="form-group">
+                            <label for="attachment">Attachment (optional)</label>
+                            <input 
+                                type="file" 
+                                id="attachment" 
+                                name="attachment"
+                                accept="image/*,.pdf,.doc,.docx"
+                            >
+                            <small>Max file size: 5MB (Images, PDF, Word docs)</small>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-lg">Submit Feedback</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- View Feedback Page -->
+            <section id="view" class="page">
+                <div class="page-header">
+                    <h2>All Feedback</h2>
+                    <p>View and manage all submitted feedback</p>
+                </div>
+
+                <div class="filter-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-box"
+                        placeholder="🔍 Search feedback..."
+                        onkeyup="filterFeedback()"
+                    >
+                    <select id="typeFilter" class="filter-select" onchange="filterFeedback()">
+                        <option value="">All Types</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="praise">Praise</option>
+                        <option value="feature-request">Feature Request</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <select id="ratingFilter" class="filter-select" onchange="filterFeedback()">
+                        <option value="">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                        <option value="2">2+ Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+
+                <div class="feedback-list-container">
+                    <div id="feedbackList" class="feedback-list">
+                        <p class="empty-message">No feedback yet. Be the first to share!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Page -->
+            <section id="analytics" class="page">
+                <div class="page-header">
+                    <h2>Feedback Analytics</h2>
+                    <p>Insights and statistics about collected feedback</p>
+                </div>
+
+                <div class="analytics-grid">
+                    <!-- Summary Stats -->
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalFeedback">0</div>
+                        <div class="stat-label">Total Feedback</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-value" id="avgRating">0.0</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-value" id="satisfactionRate">0%</div>
+                        <div class="stat-label">Satisfaction Rate (4+ stars)</div>
+                    </div>
+
+                    <!-- Rating Distribution -->
+                    <div class="chart-card">
+                        <h3>Rating Distribution</h3>
+                        <div id="ratingDistribution" class="distribution-chart">
+                            <!-- Bars will be generated here -->
+                        </div>
+                    </div>
+
+                    <!-- Feedback Type Distribution -->
+                    <div class="chart-card">
+                        <h3>Feedback by Type</h3>
+                        <div id="typeDistribution" class="type-distribution">
+                            <!-- Type distribution will be shown here -->
+                        </div>
+                    </div>
+
+                    <!-- Recent Feedback Summary -->
+                    <div class="chart-card full-width">
+                        <h3>Feedback Quality Metrics</h3>
+                        <div class="metrics-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Metric</th>
+                                        <th>Value</th>
+                                        <th>Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="metricsBody">
+                                    <tr><td>Positive (5 stars)</td><td id="positive">0</td><td id="positivePercent">0%</td></tr>
+                                    <tr><td>Neutral (3-4 stars)</td><td id="neutral">0</td><td id="neutralPercent">0%</td></tr>
+                                    <tr><td>Negative (1-2 stars)</td><td id="negative">0</td><td id="negativePercent">0%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Feedback Hub. All rights reserved. | Your feedback matters to us!</p>
+        </footer>
+    </div>
+
+    <!-- Modal for viewing detailed feedback -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFeedbackModal()">&times;</span>
+            <div id="modalBody" class="modal-body">
+                <!-- Feedback details will be loaded here -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeFeedbackModal()">Close</button>
+                <button class="btn btn-danger" id="deleteBtn" onclick="deleteFeedback()">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

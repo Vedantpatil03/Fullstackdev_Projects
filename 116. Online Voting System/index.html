@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>116. Online Voting System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#4f46e5; --accent-soft: color-mix(in srgb, #4f46e5 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 116</span>
+        <span class="chip">QUIZ page</span>
+        <span class="chip">split layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#4f46e5" style="background:#4f46e5" title="#4f46e5" type="button"></button><button class="dot" data-accent="hsl(147 78% 48%)" style="background:hsl(147 78% 48%)" title="hsl(147 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(219 72% 42%)" style="background:hsl(219 72% 42%)" title="hsl(219 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-split">
+      <p class="eyebrow">Project 116</p>
+      <h1>Online Voting System</h1>
+      <p>An interactive quiz or poll board with live scoring. Built for Online Voting System.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":116,"name":"Online Voting System","mode":"quiz","variant":"vote","accent":"#4f46e5","layout":"split","widget":"palette","hue":95,"accentSet":["#4f46e5","hsl(147 78% 48%)","hsl(219 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"Which option wins the poll?","options":["Option A","Option B","Option C","Option D"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Online Voting System","secondaryAction":"Save Online Voting System","subtitle":"An interactive quiz or poll board with live scoring. Built for Online Voting System.","title":"Online Voting System"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

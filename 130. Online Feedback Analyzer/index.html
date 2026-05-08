@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>130. Online Feedback Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#b91c1c; --accent-soft: color-mix(in srgb, #b91c1c 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 130</span>
+        <span class="chip">DASHBOARD page</span>
+        <span class="chip">stacked layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#b91c1c" style="background:#b91c1c" title="#b91c1c" type="button"></button><button class="dot" data-accent="hsl(193 78% 48%)" style="background:hsl(193 78% 48%)" title="hsl(193 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(265 72% 42%)" style="background:hsl(265 72% 42%)" title="hsl(265 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-stacked">
+      <p class="eyebrow">Project 130</p>
+      <h1>Online Feedback Analyzer</h1>
+      <p>A browser-driven dashboard with create, delete, and reporting flows. Built for Online Feedback Analyzer.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":130,"name":"Online Feedback Analyzer","mode":"dashboard","variant":"analyzer","accent":"#b91c1c","layout":"stacked","widget":"bookmarks","hue":141,"accentSet":["#b91c1c","hsl(193 78% 48%)","hsl(265 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Online Feedback Analyzer","secondaryAction":"Save Online Feedback Analyzer","subtitle":"A browser-driven dashboard with create, delete, and reporting flows. Built for Online Feedback Analyzer.","title":"Online Feedback Analyzer"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

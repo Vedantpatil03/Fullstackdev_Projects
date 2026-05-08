@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>113. Online Book Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#7c2d12; --accent-soft: color-mix(in srgb, #7c2d12 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 113</span>
+        <span class="chip">HERO page</span>
+        <span class="chip">timeline layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#7c2d12" style="background:#7c2d12" title="#7c2d12" type="button"></button><button class="dot" data-accent="hsl(60 78% 48%)" style="background:hsl(60 78% 48%)" title="hsl(60 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(132 72% 42%)" style="background:hsl(132 72% 42%)" title="hsl(132 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-timeline">
+      <p class="eyebrow">Project 113</p>
+      <h1>Online Book Library</h1>
+      <p>A polished content site with sections, features, and a capture form. Built for Online Book Library.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":113,"name":"Online Book Library","mode":"hero","variant":"library","accent":"#7c2d12","layout":"timeline","widget":"checklist","hue":8,"accentSet":["#7c2d12","hsl(60 78% 48%)","hsl(132 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Search","title":"Find books quickly","text":"Filter books, add favorites, and manage the reading shelf."},{"label":"Reads","title":"Curated categories","text":"Build a clean library experience with browsing sections."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Online Book Library","secondaryAction":"Save Online Book Library","subtitle":"A polished content site with sections, features, and a capture form. Built for Online Book Library.","title":"Online Book Library"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

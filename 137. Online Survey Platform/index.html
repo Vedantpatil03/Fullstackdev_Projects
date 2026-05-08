@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>137. Online Survey Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#0ea5e9; --accent-soft: color-mix(in srgb, #0ea5e9 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 137</span>
+        <span class="chip">QUIZ page</span>
+        <span class="chip">bento layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#0ea5e9" style="background:#0ea5e9" title="#0ea5e9" type="button"></button><button class="dot" data-accent="hsl(36 78% 48%)" style="background:hsl(36 78% 48%)" title="hsl(36 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(108 72% 42%)" style="background:hsl(108 72% 42%)" title="hsl(108 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-bento">
+      <p class="eyebrow">Project 137</p>
+      <h1>Online Survey Platform</h1>
+      <p>An interactive quiz or poll board with live scoring. Built for Online Survey Platform.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":137,"name":"Online Survey Platform","mode":"quiz","variant":"survey","accent":"#0ea5e9","layout":"bento","widget":"counter","hue":344,"accentSet":["#0ea5e9","hsl(36 78% 48%)","hsl(108 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Feature","title":"Interactive UI","text":"Built with reusable components and local browser storage."},{"label":"Layout","title":"Responsive sections","text":"Adaptive grids and panels for desktop and mobile."},{"label":"Data","title":"Live interaction","text":"Forms, lists, searches, counters, and saved state."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"Which feature should improve first?","options":["Speed","Design","Forms","Reports"],"answer":0},{"question":"How often should updates ship?","options":["Weekly","Monthly","Quarterly","On demand"],"answer":0},{"question":"What matters most in a demo?","options":["Clarity","Complexity","Noise","Randomness"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Online Survey Platform","secondaryAction":"Save Online Survey Platform","subtitle":"An interactive quiz or poll board with live scoring. Built for Online Survey Platform.","title":"Online Survey Platform"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

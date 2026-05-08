@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Notes Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Personal workspace</p>
+        <h1>Online Notes Manager</h1>
+        <p class="lede">Capture quick thoughts, organize with tags, and find them fast. Everything lives in your browser.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="resetForm" class="ghost">Reset form</button>
+        <button id="exportNotes" class="primary">Export JSON</button>
+      </div>
+    </header>
+
+    <section class="layout">
+      <aside class="panel">
+        <h2>Create / Edit</h2>
+        <form id="noteForm" class="note-form">
+          <input type="hidden" id="noteId" />
+          <label class="field">
+            <span>Title</span>
+            <input id="title" name="title" type="text" placeholder="Project ideas" required maxlength="120" />
+          </label>
+          <label class="field">
+            <span>Details</span>
+            <textarea id="body" name="body" rows="6" placeholder="Sketch the plan, bullets, links" required></textarea>
+          </label>
+          <label class="field">
+            <span>Tags (comma separated)</span>
+            <input id="tags" name="tags" type="text" placeholder="work, personal, research" />
+          </label>
+          <label class="field">
+            <span>Accent color</span>
+            <input id="color" name="color" type="color" value="#ff9950" />
+          </label>
+          <label class="checkbox">
+            <input id="pinned" name="pinned" type="checkbox" />
+            <span>Pin this note</span>
+          </label>
+          <button type="submit" class="primary" id="submitBtn">Save note</button>
+        </form>
+      </aside>
+
+      <main class="content">
+        <div class="toolbar">
+          <div class="search-group">
+            <input id="search" type="search" placeholder="Search title or text" />
+            <input id="tagFilter" type="text" placeholder="Filter by tag" />
+          </div>
+          <div class="toolbar-actions">
+            <select id="sort">
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="title">Title A-Z</option>
+              <option value="pinned">Pinned first</option>
+            </select>
+            <button id="clearAll" class="ghost">Clear all</button>
+          </div>
+        </div>
+
+        <div class="stats" id="stats"></div>
+        <div id="noteGrid" class="grid" aria-live="polite"></div>
+      </main>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>114. Job Application Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#0f766e; --accent-soft: color-mix(in srgb, #0f766e 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 114</span>
+        <span class="chip">HERO page</span>
+        <span class="chip">sidebar layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#0f766e" style="background:#0f766e" title="#0f766e" type="button"></button><button class="dot" data-accent="hsl(89 78% 48%)" style="background:hsl(89 78% 48%)" title="hsl(89 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(161 72% 42%)" style="background:hsl(161 72% 42%)" title="hsl(161 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-sidebar">
+      <p class="eyebrow">Project 114</p>
+      <h1>Job Application Portal</h1>
+      <p>A polished content site with sections, features, and a capture form. Built for Job Application Portal.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":114,"name":"Job Application Portal","mode":"hero","variant":"jobs","accent":"#0f766e","layout":"sidebar","widget":"timer","hue":37,"accentSet":["#0f766e","hsl(89 78% 48%)","hsl(161 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Roles","title":"Browse openings","text":"A job board style landing page with application actions."},{"label":"Apply","title":"Candidate form","text":"Capture applicant details and keep them in the browser."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Job Application Portal","secondaryAction":"Save Job Application Portal","subtitle":"A polished content site with sections, features, and a capture form. Built for Job Application Portal.","title":"Job Application Portal"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

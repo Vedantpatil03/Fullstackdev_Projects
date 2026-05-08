@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>My Blog</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="create">Create Post</a></li>
+                <li><a href="#" class="nav-link" data-page="about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="page-header">
+                <h2>Welcome to My Blog</h2>
+                <p>Discover stories, insights, and ideas</p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="blog-controls">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-box" 
+                    placeholder="Search posts..."
+                >
+                <select id="categoryFilter" class="category-filter">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+
+            <!-- Blog Posts Display -->
+            <div id="postsContainer" class="posts-grid">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+
+            <!-- No Posts Message -->
+            <div id="noPostsMessage" class="no-posts">
+                <p>No blog posts yet. <a href="#" class="nav-link" data-page="create">Create your first post!</a></p>
+            </div>
+        </section>
+
+        <!-- Create Post Page -->
+        <section id="create" class="page">
+            <div class="page-header">
+                <h2>Create New Post</h2>
+                <p>Share your thoughts with the world</p>
+            </div>
+
+            <form id="postForm" class="post-form">
+                <div class="form-group">
+                    <label for="postTitle">Post Title</label>
+                    <input 
+                        type="text" 
+                        id="postTitle" 
+                        placeholder="Enter post title" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="postCategory">Category</label>
+                    <input 
+                        type="text" 
+                        id="postCategory" 
+                        placeholder="e.g., Technology, Travel, Food" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea 
+                        id="postContent" 
+                        placeholder="Write your post content here..." 
+                        rows="10" 
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="postAuthor">Author Name</label>
+                    <input 
+                        type="text" 
+                        id="postAuthor" 
+                        placeholder="Your name" 
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary">Publish Post</button>
+            </form>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="page-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <h3>Welcome to My Personal Blog</h3>
+                <p>
+                    This is a personal blog platform built with HTML, CSS, and JavaScript. 
+                    Here I share my thoughts, experiences, and insights on various topics.
+                </p>
+                <p>
+                    Feel free to explore the blog posts and learn more about the topics I'm passionate about.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Viewing Full Post -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <!-- Post content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 My Personal Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

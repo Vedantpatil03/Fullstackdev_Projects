@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>121. Course Enrollment Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="--accent:#0f766e; --accent-soft: color-mix(in srgb, #0f766e 15%, white);">
+  <main class="shell">
+    <header class="topbar">
+      <div class="left">
+        <span class="chip">Project 121</span>
+        <span class="chip">HERO page</span>
+        <span class="chip">split layout</span>
+      </div>
+      <div class="right">
+        <button id="themeToggle" class="chip" type="button">Theme</button>
+        <button class="dot" data-accent="#0f766e" style="background:#0f766e" title="#0f766e" type="button"></button><button class="dot" data-accent="hsl(292 78% 48%)" style="background:hsl(292 78% 48%)" title="hsl(292 78% 48%)" type="button"></button><button class="dot" data-accent="hsl(4 72% 42%)" style="background:hsl(4 72% 42%)" title="hsl(4 72% 42%)" type="button"></button>
+      </div>
+    </header>
+    <section class="hero layout-split">
+      <p class="eyebrow">Project 121</p>
+      <h1>Course Enrollment Website</h1>
+      <p>A polished content site with sections, features, and a capture form. Built for Course Enrollment Website.</p>
+      <div class="actions">
+        <button id="heroPrimary">Open demo</button>
+        <button id="heroSecondary" class="secondary">Save state</button>
+      </div>
+    </section>
+    <section id="app" style="margin-top:18px"></section>
+    <section id="widgetZone" class="panel" style="margin-top:18px"></section>
+  </main>
+  <script>
+    window.PROJECT_CONFIG = {"number":121,"name":"Course Enrollment Website","mode":"hero","variant":"course","accent":"#0f766e","layout":"split","widget":"palette","hue":240,"accentSet":["#0f766e","hsl(292 78% 48%)","hsl(4 72% 42%)"],"fields":[{"name":"title","label":"Title"},{"name":"detail","label":"Details"}],"features":[{"label":"Enroll","title":"Course cards","text":"Display programs, seat counts, and an enrollment form."},{"label":"Plan","title":"Learning paths","text":"Organize offerings into a clear educational hub."}],"seedItems":[{"title":"Starter item","detail":"Replace this with your own data."},{"title":"Second item","detail":"Local storage keeps the demo interactive."}],"questions":[{"question":"What is the main purpose?","options":["Track records","Store files","Show cards","All of the above"],"answer":3},{"question":"Which feature should be fastest?","options":["Search","Form submit","Navigation","Charts"],"answer":0},{"question":"How are updates stored?","options":["Browser storage","Email only","Hard reset","Manual notes"],"answer":0}],"products":[{"name":"Starter item","price":19,"tag":"Popular"},{"name":"Premium item","price":39,"tag":"New"},{"name":"Bundle item","price":59,"tag":"Value"}],"primaryAction":"Open Course Enrollment Website","secondaryAction":"Save Course Enrollment Website","subtitle":"A polished content site with sections, features, and a capture form. Built for Course Enrollment Website.","title":"Course Enrollment Website"};
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

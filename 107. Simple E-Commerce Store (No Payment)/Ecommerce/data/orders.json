@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ORD-1769968109414",
+    "customerName": "Vedant Patil",
+    "email": "vp@gmail.com",
+    "address": "Beed Bypass Road",
+    "city": "Chh Sambhajinagar",
+    "zipCode": "431010",
+    "items": [
+      {
+        "id": 7,
+        "name": "MacBook Pro",
+        "price": 1999,
+        "quantity": 1,
+        "emoji": "💻"
+      },
+      {
+        "id": 3,
+        "name": "iPad Air",
+        "price": 599,
+        "quantity": 1,
+        "emoji": "📱"
+      }
+    ],
+    "total": 2598,
+    "tax": 259.8,
+    "date": "01/02/2026",
+    "status": "Processing"
+  }
+]

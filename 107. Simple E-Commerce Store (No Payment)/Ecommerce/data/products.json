@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Pro",
+    "category": "laptops",
+    "price": 1299,
+    "stock": 5,
+    "emoji": "💻",
+    "description": "High-performance laptop for professionals"
+  },
+  {
+    "id": 2,
+    "name": "iPhone 15",
+    "category": "phones",
+    "price": 999,
+    "stock": 8,
+    "emoji": "📱",
+    "description": "Latest generation smartphone"
+  },
+  {
+    "id": 3,
+    "name": "iPad Air",
+    "category": "phones",
+    "price": 599,
+    "stock": 9,
+    "emoji": "📱",
+    "description": "Powerful tablet for work and play"
+  },
+  {
+    "id": 4,
+    "name": "Wireless Headphones",
+    "category": "accessories",
+    "price": 199,
+    "stock": 15,
+    "emoji": "🎧",
+    "description": "Premium noise-canceling headphones"
+  },
+  {
+    "id": 5,
+    "name": "USB-C Cable",
+    "category": "accessories",
+    "price": 19,
+    "stock": 50,
+    "emoji": "🔌",
+    "description": "Fast charging USB-C cable"
+  },
+  {
+    "id": 6,
+    "name": "Laptop Stand",
+    "category": "accessories",
+    "price": 49,
+    "stock": 20,
+    "emoji": "🖥️",
+    "description": "Ergonomic laptop stand"
+  },
+  {
+    "id": 7,
+    "name": "MacBook Pro",
+    "category": "laptops",
+    "price": 1999,
+    "stock": 2,
+    "emoji": "💻",
+    "description": "Professional-grade laptop"
+  },
+  {
+    "id": 8,
+    "name": "Samsung Galaxy",
+    "category": "phones",
+    "price": 799,
+    "stock": 12,
+    "emoji": "📱",
+    "description": "Flagship Android smartphone"
+  }
+]
